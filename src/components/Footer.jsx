@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer style={{ background: '#0f172a', padding: '60px 0 20px', color: '#cbd5e1' }}>
       <div className="container">
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '40px', justifyContent: 'space-between', borderBottom: '1px solid #1e293b', paddingBottom: '40px', marginBottom: '30px' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '40px', justifyContent: 'space-between', borderBottom: '1px solid var(--glass-border)', paddingBottom: '40px', marginBottom: '30px' }}>
           
           <div style={{ flex: '1 1 300px' }}>
             <Link to="home" smooth={true} duration={500} style={{ cursor: 'pointer', display: 'inline-block', marginBottom: '20px', textDecoration: 'none' }}>
@@ -16,13 +16,13 @@ const Footer = () => {
               Building exceptional and accessible digital experiences for the web. Specialized in full-stack development.
             </p>
             <div style={{ display: 'flex', gap: '15px' }}>
-              <a href="https://github.com/dev-alamin04" target="_blank" rel="noreferrer" style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#1e293b', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', transition: 'all 0.3s ease' }}>
+              <a href="https://github.com/dev-alamin04" target="_blank" rel="noreferrer" style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--light-gray)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', transition: 'all 0.3s ease' }} onMouseOver={(e)=>e.target.style.background='var(--primary)'} onMouseOut={(e)=>e.target.style.background='var(--light-gray)'}>
                 <FiGithub />
               </a>
-              <a href="https://www.linkedin.com/in/al-amin-khalifa" target="_blank" rel="noreferrer" style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#1e293b', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', transition: 'all 0.3s ease' }}>
+              <a href="https://www.linkedin.com/in/al-amin-khalifa" target="_blank" rel="noreferrer" style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--light-gray)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', transition: 'all 0.3s ease' }} onMouseOver={(e)=>e.target.style.background='var(--primary)'} onMouseOut={(e)=>e.target.style.background='var(--light-gray)'}>
                 <FiLinkedin />
               </a>
-              <a href="https://twitter.com/dev_alamin04" target="_blank" rel="noreferrer" style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#1e293b', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', transition: 'all 0.3s ease' }}>
+              <a href="https://twitter.com/dev_alamin04" target="_blank" rel="noreferrer" style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--light-gray)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', transition: 'all 0.3s ease' }} onMouseOver={(e)=>e.target.style.background='var(--primary)'} onMouseOut={(e)=>e.target.style.background='var(--light-gray)'}>
                 <FiTwitter />
               </a>
             </div>
@@ -52,7 +52,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div style={{ textAlign: 'center', color: '#64748b', fontSize: '0.9rem' }}>
+        <div style={{ textAlign: 'center', color: 'var(--gray)', fontSize: '0.9rem' }}>
           <p>
             &copy; {new Date().getFullYear()} Al-amin Khalifa. Made with <FiHeart style={{ color: '#ef4444', display: 'inline', margin: '0 3px' }} /> and React.
           </p>

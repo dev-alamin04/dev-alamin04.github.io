@@ -20,12 +20,23 @@ import './index.css';
 // Using a short, synthetic base64 sound for hover/click just to prove it works.
 const hoverSoundBase64 = "data:audio/wav;base64,UklGRjIAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAAABmYWN0BAAAAAAAAABkYXRhCAAAAAECAwQFBgcICQ=="; 
 const clickSoundBase64 = "data:audio/wav;base64,UklGRjIAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAAABmYWN0BAAAAAAAAABkYXRhCAAAAAECAwQFBgcICQ==";
+const scrollSoundBase64 = "data:audio/wav;base64,UklGRjIAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAAABmYWN0BAAAAAAAAABkYXRhCAAAAAECAwQFBgcICQ=="; // placeholder short tick
 
 function App() {
   const [playHover] = useSound(hoverSoundBase64, { volume: 0.1 });
   const [playClick] = useSound(clickSoundBase64, { volume: 0.2 });
+  const [playScroll] = useSound(scrollSoundBase64, { volume: 0.05 }); // very quiet
 
   useEffect(() => {
+    let lastScrollTime = 0;
+    const handleWheel = (e) => {
+      const now = Date.now();
+      if (now - lastScrollTime > 150) { // Throttle scroll sound to once every 150ms
+        playScroll();
+        lastScrollTime = now;
+      }
+    };
+
     const handleMouseOver = (e) => {
       const target = e.target;
       if (
@@ -53,12 +64,14 @@ function App() {
 
     window.addEventListener('mouseover', handleMouseOver);
     window.addEventListener('click', handleClick);
+    window.addEventListener('wheel', handleWheel, { passive: true });
 
     return () => {
       window.removeEventListener('mouseover', handleMouseOver);
       window.removeEventListener('click', handleClick);
+      window.removeEventListener('wheel', handleWheel);
     };
-  }, [playHover, playClick]);
+  }, [playHover, playClick, playScroll]);
 
   const particlesInit = useCallback(async engine => {
     await loadFull(engine);
@@ -82,16 +95,16 @@ function App() {
               resize: true,
             },
             modes: {
-              push: { quantity: 4 },
-              repulse: { distance: 150, duration: 0.4 },
+              push: { quantity: 2 },
+              repulse: { distance: 100, duration: 0.6 },
             },
           },
           particles: {
             color: { value: "#38bdf8" },
-            links: { color: "#a855f7", distance: 150, enable: true, opacity: 0.15, width: 1 },
-            move: { direction: "none", enable: true, outModes: { default: "bounce" }, random: false, speed: 0.5, straight: false },
-            number: { density: { enable: true, area: 1000 }, value: 60 },
-            opacity: { value: 0.3 },
+            links: { color: "#a855f7", distance: 150, enable: true, opacity: 0.05, width: 1 },
+            move: { direction: "none", enable: true, outModes: { default: "bounce" }, random: true, speed: 0.2, straight: false },
+            number: { density: { enable: true, area: 1000 }, value: 40 },
+            opacity: { value: 0.15 },
             shape: { type: "circle" },
             size: { value: { min: 1, max: 2 } },
           },

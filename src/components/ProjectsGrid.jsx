@@ -45,9 +45,9 @@ const ProjectsGrid = () => {
               style={{
                 padding: '8px 20px',
                 borderRadius: '30px',
-                border: 'none',
-                background: filter === f ? '#3b82f6' : '#f1f5f9',
-                color: filter === f ? '#fff' : '#64748b',
+                border: filter === f ? '1px solid var(--primary)' : '1px solid var(--glass-border)',
+                background: filter === f ? 'var(--primary)' : 'var(--glass-bg)',
+                color: filter === f ? '#fff' : 'var(--dark)',
                 cursor: 'pointer',
                 fontWeight: '500',
                 transition: 'all 0.3s ease',
@@ -94,7 +94,7 @@ const ProjectsGrid = () => {
                       style={{
                         width: '100%',
                         height: '200px',
-                        background: project.bgGradient || '#1e293b',
+                        background: project.bgGradient || 'var(--light-gray)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -132,7 +132,7 @@ const ProjectsGrid = () => {
                             <a href={project.githubLink} target="_blank" rel="noreferrer" style={{ width: '45px', height: '45px', borderRadius: '50%', background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#0f172a', fontSize: '1.2rem' }}>
                               <FiGithub />
                             </a>
-                            <a href={project.demoLink} target="_blank" rel="noreferrer" style={{ width: '45px', height: '45px', borderRadius: '50%', background: '#3b82f6', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: '1.2rem' }}>
+                            <a href={project.demoLink} target="_blank" rel="noreferrer" style={{ width: '45px', height: '45px', borderRadius: '50%', background: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: '1.2rem' }}>
                               <FiExternalLink />
                             </a>
                           </>

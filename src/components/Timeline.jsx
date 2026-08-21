@@ -23,7 +23,7 @@ const Timeline = () => {
 
         <div className="experience-timeline" style={{ position: 'relative', marginTop: '50px' }}>
           {/* Vertical Line */}
-          <div style={{ position: 'absolute', left: '50%', top: 0, bottom: 0, width: '2px', background: 'linear-gradient(to bottom, #3b82f6, #8b5cf6)', transform: 'translateX(-50%)', opacity: 0.2 }} className="timeline-line hidden md:block"></div>
+          <div style={{ position: 'absolute', left: '50%', top: 0, bottom: 0, width: '2px', background: 'var(--gradient)', transform: 'translateX(-50%)', opacity: 0.2 }} className="timeline-line hidden md:block"></div>
 
           {clientProjects.map((project, index) => {
             const isLeft = index % 2 === 0;
@@ -57,7 +57,7 @@ const Timeline = () => {
                     width: '20px',
                     height: '20px',
                     borderRadius: '50%',
-                    background: '#3b82f6',
+                    background: 'var(--primary)',
                     transform: 'translate(-50%, -50%)',
                     border: '4px solid #fff',
                     boxShadow: '0 0 0 4px rgba(59, 130, 246, 0.2)'
@@ -85,7 +85,7 @@ const Timeline = () => {
                     </span>
                   </div>
                   <div className="timeline-body">
-                    <p style={{ color: '#64748b', lineHeight: 1.7, marginBottom: '20px' }}>
+                    <p style={{ color: 'var(--gray)', lineHeight: 1.7, marginBottom: '20px' }}>
                       {project.description}
                     </p>
                     <div className="project-features" style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '20px' }}>

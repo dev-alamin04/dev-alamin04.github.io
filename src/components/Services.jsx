@@ -91,8 +91,8 @@ const Services = () => {
               >
                 {service.icon}
               </div>
-              <h3 style={{ fontSize: '1.25rem', color: '#1e293b', marginBottom: '15px' }}>{service.title}</h3>
-              <p style={{ color: '#64748b', lineHeight: 1.6, fontSize: '0.95rem' }}>{service.description}</p>
+              <h3 style={{ fontSize: '1.25rem', color: 'var(--dark)', marginBottom: '15px' }}>{service.title}</h3>
+              <p style={{ color: 'var(--gray)', lineHeight: 1.6, fontSize: '0.95rem' }}>{service.description}</p>
             </motion.div>
           ))}
         </div>
