@@ -256,11 +256,12 @@ h1, h2, h3, h4 {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--glass-bg);
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 20px 0;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid var(--glass-border);
 }
 
 .navbar .container {
@@ -378,7 +379,7 @@ h1, h2, h3, h4 {
     display: flex;
     align-items: center;
     position: relative;
-    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    background: transparent;
     overflow: hidden;
 }
 
@@ -576,7 +577,9 @@ h1, h2, h3, h4 {
     position: absolute;
     width: 60px;
     height: 60px;
-    background: white;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(5px);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -696,11 +699,12 @@ h1, h2, h3, h4 {
 
 .highlight-card {
     padding: 1.5rem;
-    background: white;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     transition: var(--transition);
-    border: 1px solid var(--light-gray);
+    border: 1px solid var(--glass-border);
 }
 
 .highlight-card:hover {
@@ -754,7 +758,9 @@ h1, h2, h3, h4 {
 }
 
 .code-window {
-    background: var(--dark);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow-xl);
@@ -762,7 +768,7 @@ h1, h2, h3, h4 {
 
 .window-header {
     padding: 1rem 1.5rem;
-    background: var(--dark-light);
+    background: var(--light-gray);
     display: flex;
     align-items: center;
     gap: 1rem;
