@@ -13,6 +13,7 @@ import ProjectsGrid from './components/ProjectsGrid';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import FishBackground from './components/FishBackground';
 import './index.css';
 
 // We can use a simple data URI for high-tech sounds (to avoid missing files), 
@@ -81,37 +82,8 @@ function App() {
     <div className="app-container">
       <CustomCursor />
       
-      {/* Global Interactive Background */}
-      <Particles
-        id="tsparticles-global"
-        init={particlesInit}
-        options={{
-          background: { color: { value: "transparent" } },
-          fpsLimit: 60,
-          interactivity: {
-            events: {
-              onClick: { enable: true, mode: "push" },
-              onHover: { enable: true, mode: "repulse" },
-              resize: true,
-            },
-            modes: {
-              push: { quantity: 2 },
-              repulse: { distance: 100, duration: 0.6 },
-            },
-          },
-          particles: {
-            color: { value: "#38bdf8" },
-            links: { color: "#a855f7", distance: 150, enable: true, opacity: 0.05, width: 1 },
-            move: { direction: "none", enable: true, outModes: { default: "bounce" }, random: true, speed: 0.2, straight: false },
-            number: { density: { enable: true, area: 1000 }, value: 40 },
-            opacity: { value: 0.15 },
-            shape: { type: "circle" },
-            size: { value: { min: 1, max: 2 } },
-          },
-          detectRetina: true,
-        }}
-        style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100vh', zIndex: -1 }}
-      />
+      {/* Global Interactive Background (Water, Bubbles, and Betta Fishes) */}
+      <FishBackground />
 
       <Navbar />
       <main>
