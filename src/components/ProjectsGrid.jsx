@@ -78,11 +78,12 @@ const ProjectsGrid = () => {
                   <div 
                     className="project-card"
                     style={{
-                      background: '#fff',
+                      background: 'var(--glass-bg)',
+                      backdropFilter: 'blur(10px)',
                       borderRadius: 'var(--border-radius)',
                       overflow: 'hidden',
                       boxShadow: 'var(--shadow)',
-                      border: '1px solid var(--light-gray)',
+                      border: '1px solid var(--glass-border)',
                       height: '100%',
                       display: 'flex',
                       flexDirection: 'column'

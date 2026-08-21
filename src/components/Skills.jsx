@@ -15,7 +15,7 @@ const SkillCategory = ({ title, skills, delay }) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.5, delay }}
-    style={{ background: '#fff', padding: '30px', borderRadius: 'var(--border-radius)', boxShadow: 'var(--shadow)', border: '1px solid var(--light-gray)' }}
+    style={{ background: 'var(--glass-bg)', backdropFilter: 'blur(10px)', padding: '30px', borderRadius: 'var(--border-radius)', boxShadow: 'var(--shadow)', border: '1px solid var(--glass-border)' }}
   >
     <h3 className="category-title" style={{ fontSize: '1.2rem', marginBottom: '20px', color: 'var(--dark)', borderBottom: '1px solid var(--light-gray)', paddingBottom: '12px', fontWeight: 600 }}>
       {title}
@@ -38,7 +38,7 @@ const SkillCategory = ({ title, skills, delay }) => (
 
 const Skills = () => {
   return (
-    <section id="skills" className="skills section-padding" style={{ background: '#f8fafc' }}>
+    <section id="skills" className="skills section-padding">
       <div className="container">
         <motion.div 
           className="section-header"

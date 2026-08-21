@@ -44,30 +44,30 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h3>Full Stack Web Developer</h3>
-            <p style={{ marginTop: '15px', color: '#64748b', lineHeight: 1.8 }}>
+            <p style={{ marginTop: '15px', color: 'var(--gray)', lineHeight: 1.8 }}>
               I am a passionate Full Stack Web Developer with expertise in building scalable, real-world applications. 
               I specialize in Laravel, React, and modern JavaScript architectures. My journey in web development 
               has led me to work on complex marketplaces, real-time geofencing delivery apps, and highly secure 
               transactional platforms.
             </p>
-            <p style={{ marginTop: '15px', color: '#64748b', lineHeight: 1.8 }}>
+            <p style={{ marginTop: '15px', color: 'var(--gray)', lineHeight: 1.8 }}>
               I am dedicated to writing clean, efficient code and delivering exceptional user experiences. 
               When I'm not coding, I'm exploring new technologies, optimizing backend architectures, or 
               collaborating with teams to solve challenging technical problems.
             </p>
             
             <div className="about-stats" style={{ display: 'flex', gap: '20px', marginTop: '30px' }}>
-              <div className="stat-box" style={{ padding: '20px', background: '#fff', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.05)', textAlign: 'center', flex: 1 }}>
-                <h4 style={{ fontSize: '2rem', color: '#3b82f6', marginBottom: '5px' }}>3+</h4>
-                <p style={{ fontSize: '0.9rem', color: '#64748b' }}>Years Experience</p>
+              <div className="stat-box" style={{ padding: '20px', background: 'var(--glass-bg)', backdropFilter: 'blur(10px)', border: '1px solid var(--glass-border)', borderRadius: '10px', boxShadow: 'var(--shadow)', textAlign: 'center', flex: 1 }}>
+                <h4 style={{ fontSize: '2rem', color: 'var(--primary)', marginBottom: '5px' }}>3+</h4>
+                <p style={{ fontSize: '0.9rem', color: 'var(--gray)' }}>Years Experience</p>
               </div>
-              <div className="stat-box" style={{ padding: '20px', background: '#fff', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.05)', textAlign: 'center', flex: 1 }}>
-                <h4 style={{ fontSize: '2rem', color: '#3b82f6', marginBottom: '5px' }}>20+</h4>
-                <p style={{ fontSize: '0.9rem', color: '#64748b' }}>Projects Completed</p>
+              <div className="stat-box" style={{ padding: '20px', background: 'var(--glass-bg)', backdropFilter: 'blur(10px)', border: '1px solid var(--glass-border)', borderRadius: '10px', boxShadow: 'var(--shadow)', textAlign: 'center', flex: 1 }}>
+                <h4 style={{ fontSize: '2rem', color: 'var(--primary)', marginBottom: '5px' }}>20+</h4>
+                <p style={{ fontSize: '0.9rem', color: 'var(--gray)' }}>Projects Completed</p>
               </div>
-              <div className="stat-box" style={{ padding: '20px', background: '#fff', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.05)', textAlign: 'center', flex: 1 }}>
-                <h4 style={{ fontSize: '2rem', color: '#3b82f6', marginBottom: '5px' }}>15+</h4>
-                <p style={{ fontSize: '0.9rem', color: '#64748b' }}>Happy Clients</p>
+              <div className="stat-box" style={{ padding: '20px', background: 'var(--glass-bg)', backdropFilter: 'blur(10px)', border: '1px solid var(--glass-border)', borderRadius: '10px', boxShadow: 'var(--shadow)', textAlign: 'center', flex: 1 }}>
+                <h4 style={{ fontSize: '2rem', color: 'var(--primary)', marginBottom: '5px' }}>15+</h4>
+                <p style={{ fontSize: '0.9rem', color: 'var(--gray)' }}>Happy Clients</p>
               </div>
             </div>
           </motion.div>

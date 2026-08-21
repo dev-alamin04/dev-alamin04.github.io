@@ -37,7 +37,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="services section-padding" style={{ background: '#f8fafc' }}>
+    <section id="services" className="services section-padding">
       <div className="container">
         <motion.div 
           className="section-header text-center"
@@ -64,11 +64,12 @@ const Services = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -10, boxShadow: 'var(--shadow-xl)', borderColor: 'var(--primary)' }}
               style={{
-                background: '#fff',
+                background: 'var(--glass-bg)',
+                backdropFilter: 'blur(10px)',
                 padding: '40px 30px',
                 borderRadius: 'var(--border-radius)',
                 boxShadow: 'var(--shadow)',
-                border: '1px solid var(--light-gray)',
+                border: '1px solid var(--glass-border)',
                 textAlign: 'center',
                 transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
               }}
