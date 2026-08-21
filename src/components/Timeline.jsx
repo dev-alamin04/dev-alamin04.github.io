@@ -69,17 +69,18 @@ const Timeline = () => {
                   style={{
                     width: '100%',
                     maxWidth: '48%',
-                    background: '#fff',
+                    background: 'var(--glass-bg)',
+                    backdropFilter: 'blur(10px)',
                     padding: '30px',
                     borderRadius: 'var(--border-radius)',
                     boxShadow: 'var(--shadow)',
-                    border: '1px solid var(--light-gray)',
+                    border: '1px solid var(--glass-border)',
                     position: 'relative'
                   }}
                 >
                   <div className="timeline-header" style={{ marginBottom: '15px' }}>
                     <h3 style={{ fontSize: '1.4rem', color: 'var(--dark)' }}>{project.title}</h3>
-                    <span style={{ display: 'inline-block', padding: '6px 12px', background: 'rgba(79, 70, 229, 0.1)', color: 'var(--primary)', borderRadius: '20px', fontSize: '0.8rem', marginTop: '10px', fontWeight: 600 }}>
+                    <span style={{ display: 'inline-block', padding: '6px 12px', background: 'rgba(56, 189, 248, 0.15)', color: 'var(--primary)', borderRadius: '20px', fontSize: '0.8rem', marginTop: '10px', fontWeight: 600, border: '1px solid rgba(56, 189, 248, 0.3)' }}>
                       {project.type}
                     </span>
                   </div>
@@ -96,7 +97,7 @@ const Timeline = () => {
                     </div>
                     <div className="tech-stack" style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '20px' }}>
                       {project.techStack.map((tech, i) => (
-                        <span key={i} style={{ padding: '4px 10px', background: '#f1f5f9', color: '#64748b', borderRadius: '4px', fontSize: '0.8rem' }}>
+                        <span key={i} style={{ padding: '4px 10px', background: 'var(--light-gray)', color: 'var(--dark-light)', borderRadius: '4px', fontSize: '0.8rem', border: '1px solid var(--glass-border)' }}>
                           {tech}
                         </span>
                       ))}
@@ -104,7 +105,7 @@ const Timeline = () => {
                     {project.isPrivate && (
                       <button 
                         disabled 
-                        style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '8px 15px', background: '#f1f5f9', color: '#94a3b8', border: 'none', borderRadius: '6px', fontSize: '0.9rem', cursor: 'not-allowed' }}
+                        style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '8px 15px', background: 'var(--light-gray)', color: 'var(--gray)', border: '1px solid var(--glass-border)', borderRadius: '6px', fontSize: '0.9rem', cursor: 'not-allowed' }}
                       >
                         <FiLock /> Private Repository
                       </button>
