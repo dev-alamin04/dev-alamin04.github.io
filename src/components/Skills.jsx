@@ -15,9 +15,9 @@ const SkillCategory = ({ title, skills, delay }) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.5, delay }}
-    style={{ background: '#fff', padding: '30px', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}
+    style={{ background: '#fff', padding: '30px', borderRadius: 'var(--border-radius)', boxShadow: 'var(--shadow)', border: '1px solid var(--light-gray)' }}
   >
-    <h3 className="category-title" style={{ fontSize: '1.2rem', marginBottom: '20px', color: '#1e293b', borderBottom: '2px solid #f1f5f9', paddingBottom: '10px' }}>
+    <h3 className="category-title" style={{ fontSize: '1.2rem', marginBottom: '20px', color: 'var(--dark)', borderBottom: '1px solid var(--light-gray)', paddingBottom: '12px', fontWeight: 600 }}>
       {title}
     </h3>
     <div className="skills-list" style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
@@ -25,9 +25,9 @@ const SkillCategory = ({ title, skills, delay }) => (
         <motion.span 
           key={index} 
           className="skill-tag"
-          whileHover={{ scale: 1.1, backgroundColor: '#3b82f6', color: '#fff' }}
-          transition={{ type: "spring", stiffness: 300 }}
-          style={{ padding: '8px 15px', background: '#f8fafc', color: '#475569', borderRadius: '20px', fontSize: '0.9rem', cursor: 'default', border: '1px solid #e2e8f0' }}
+          whileHover={{ scale: 1.05, backgroundColor: 'var(--primary)', color: '#fff', boxShadow: 'var(--shadow-sm)' }}
+          transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          style={{ padding: '8px 16px', background: 'var(--light)', color: 'var(--gray)', borderRadius: '20px', fontSize: '0.9rem', cursor: 'default', border: '1px solid var(--light-gray)', fontWeight: 500 }}
         >
           {skill}
         </motion.span>

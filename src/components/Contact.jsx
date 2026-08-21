@@ -35,7 +35,7 @@ const Contact = () => {
             </p>
 
             <div className="info-item" style={{ display: 'flex', gap: '20px', marginBottom: '30px' }}>
-              <div className="icon" style={{ width: '50px', height: '50px', background: 'rgba(59, 130, 246, 0.1)', color: '#3b82f6', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', flexShrink: 0 }}>
+              <div className="icon" style={{ width: '50px', height: '50px', background: 'rgba(79, 70, 229, 0.1)', color: 'var(--primary)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', flexShrink: 0 }}>
                 <FiMapPin />
               </div>
               <div>
@@ -45,7 +45,7 @@ const Contact = () => {
             </div>
 
             <div className="info-item" style={{ display: 'flex', gap: '20px', marginBottom: '30px' }}>
-              <div className="icon" style={{ width: '50px', height: '50px', background: 'rgba(59, 130, 246, 0.1)', color: '#3b82f6', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', flexShrink: 0 }}>
+              <div className="icon" style={{ width: '50px', height: '50px', background: 'rgba(79, 70, 229, 0.1)', color: 'var(--primary)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', flexShrink: 0 }}>
                 <FiMail />
               </div>
               <div>
@@ -55,7 +55,7 @@ const Contact = () => {
             </div>
 
             <div className="info-item" style={{ display: 'flex', gap: '20px' }}>
-              <div className="icon" style={{ width: '50px', height: '50px', background: 'rgba(59, 130, 246, 0.1)', color: '#3b82f6', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', flexShrink: 0 }}>
+              <div className="icon" style={{ width: '50px', height: '50px', background: 'rgba(79, 70, 229, 0.1)', color: 'var(--primary)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', flexShrink: 0 }}>
                 <FiPhone />
               </div>
               <div>
@@ -67,7 +67,7 @@ const Contact = () => {
 
           <motion.div 
             className="contact-form"
-            style={{ flex: '1 1 400px', background: '#fff', padding: '40px', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}
+            style={{ flex: '1 1 400px', background: '#fff', padding: '40px', borderRadius: 'var(--border-radius)', boxShadow: 'var(--shadow)', border: '1px solid var(--light-gray)' }}
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -76,23 +76,22 @@ const Contact = () => {
             <form onSubmit={(e) => e.preventDefault()}>
               <div style={{ display: 'flex', gap: '20px', marginBottom: '20px' }}>
                 <div style={{ flex: 1 }}>
-                  <input type="text" placeholder="Your Name" style={{ width: '100%', padding: '15px', borderRadius: '8px', border: '1px solid #e2e8f0', outline: 'none', background: '#f8fafc' }} />
+                  <input type="text" placeholder="Your Name" style={{ width: '100%', padding: '16px', borderRadius: '12px', border: '1px solid var(--light-gray)', outline: 'none', background: 'var(--light)', transition: 'border-color 0.3s' }} onFocus={(e)=>e.target.style.borderColor='var(--primary)'} onBlur={(e)=>e.target.style.borderColor='var(--light-gray)'} />
                 </div>
                 <div style={{ flex: 1 }}>
-                  <input type="email" placeholder="Your Email" style={{ width: '100%', padding: '15px', borderRadius: '8px', border: '1px solid #e2e8f0', outline: 'none', background: '#f8fafc' }} />
+                  <input type="email" placeholder="Your Email" style={{ width: '100%', padding: '16px', borderRadius: '12px', border: '1px solid var(--light-gray)', outline: 'none', background: 'var(--light)', transition: 'border-color 0.3s' }} onFocus={(e)=>e.target.style.borderColor='var(--primary)'} onBlur={(e)=>e.target.style.borderColor='var(--light-gray)'} />
                 </div>
               </div>
               <div style={{ marginBottom: '20px' }}>
-                <input type="text" placeholder="Subject" style={{ width: '100%', padding: '15px', borderRadius: '8px', border: '1px solid #e2e8f0', outline: 'none', background: '#f8fafc' }} />
+                <input type="text" placeholder="Subject" style={{ width: '100%', padding: '16px', borderRadius: '12px', border: '1px solid var(--light-gray)', outline: 'none', background: 'var(--light)', transition: 'border-color 0.3s' }} onFocus={(e)=>e.target.style.borderColor='var(--primary)'} onBlur={(e)=>e.target.style.borderColor='var(--light-gray)'} />
               </div>
               <div style={{ marginBottom: '20px' }}>
-                <textarea placeholder="Your Message" rows="5" style={{ width: '100%', padding: '15px', borderRadius: '8px', border: '1px solid #e2e8f0', outline: 'none', background: '#f8fafc', resize: 'vertical' }}></textarea>
+                <textarea placeholder="Your Message" rows="5" style={{ width: '100%', padding: '16px', borderRadius: '12px', border: '1px solid var(--light-gray)', outline: 'none', background: 'var(--light)', resize: 'vertical', transition: 'border-color 0.3s' }} onFocus={(e)=>e.target.style.borderColor='var(--primary)'} onBlur={(e)=>e.target.style.borderColor='var(--light-gray)'}></textarea>
               </div>
               <motion.button 
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ scale: 1.02, boxShadow: 'var(--shadow-lg)' }}
                 whileTap={{ scale: 0.98 }}
-                className="btn btn-primary" 
-                style={{ width: '100%', border: 'none', cursor: 'pointer' }}
+                style={{ width: '100%', border: 'none', cursor: 'pointer', padding: '16px', background: 'var(--gradient)', color: '#fff', borderRadius: '12px', fontWeight: 600, fontSize: '1rem', boxShadow: 'var(--shadow)' }}
               >
                 Send Message
               </motion.button>

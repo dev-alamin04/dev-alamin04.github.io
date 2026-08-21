@@ -71,14 +71,15 @@ const Timeline = () => {
                     maxWidth: '48%',
                     background: '#fff',
                     padding: '30px',
-                    borderRadius: '15px',
-                    boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
+                    borderRadius: 'var(--border-radius)',
+                    boxShadow: 'var(--shadow)',
+                    border: '1px solid var(--light-gray)',
                     position: 'relative'
                   }}
                 >
                   <div className="timeline-header" style={{ marginBottom: '15px' }}>
-                    <h3 style={{ fontSize: '1.4rem', color: '#1e293b' }}>{project.title}</h3>
-                    <span style={{ display: 'inline-block', padding: '4px 10px', background: 'rgba(59, 130, 246, 0.1)', color: '#3b82f6', borderRadius: '20px', fontSize: '0.8rem', marginTop: '10px' }}>
+                    <h3 style={{ fontSize: '1.4rem', color: 'var(--dark)' }}>{project.title}</h3>
+                    <span style={{ display: 'inline-block', padding: '6px 12px', background: 'rgba(79, 70, 229, 0.1)', color: 'var(--primary)', borderRadius: '20px', fontSize: '0.8rem', marginTop: '10px', fontWeight: 600 }}>
                       {project.type}
                     </span>
                   </div>

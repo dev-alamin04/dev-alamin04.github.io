@@ -9,8 +9,8 @@ const Footer = () => {
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '40px', justifyContent: 'space-between', borderBottom: '1px solid #1e293b', paddingBottom: '40px', marginBottom: '30px' }}>
           
           <div style={{ flex: '1 1 300px' }}>
-            <Link to="home" smooth={true} duration={500} style={{ cursor: 'pointer', display: 'inline-block', marginBottom: '20px' }}>
-              <h2 style={{ color: '#fff', fontSize: '1.8rem', fontWeight: 'bold' }}>Dev<span style={{ color: '#3b82f6' }}>Alamin</span></h2>
+            <Link to="home" smooth={true} duration={500} style={{ cursor: 'pointer', display: 'inline-block', marginBottom: '20px', textDecoration: 'none' }}>
+              <h2 style={{ color: '#fff', fontSize: '1.8rem', fontWeight: 800, letterSpacing: '-0.5px' }}>Dev<span style={{ color: 'var(--primary)' }}>Alamin</span></h2>
             </Link>
             <p style={{ color: '#94a3b8', lineHeight: 1.6, marginBottom: '20px', maxWidth: '350px' }}>
               Building exceptional and accessible digital experiences for the web. Specialized in full-stack development.
@@ -33,7 +33,7 @@ const Footer = () => {
             <ul style={{ listStyle: 'none', padding: 0 }}>
               {['Home', 'About', 'Skills', 'Experience', 'Projects'].map(item => (
                 <li key={item} style={{ marginBottom: '10px' }}>
-                  <Link to={item.toLowerCase()} smooth={true} duration={500} style={{ color: '#94a3b8', cursor: 'pointer', transition: 'color 0.3s ease' }} onMouseOver={(e) => e.target.style.color = '#3b82f6'} onMouseOut={(e) => e.target.style.color = '#94a3b8'}>
+                  <Link to={item.toLowerCase()} smooth={true} duration={500} style={{ color: '#94a3b8', cursor: 'pointer', transition: 'color 0.3s ease' }} onMouseOver={(e) => e.target.style.color = 'var(--primary)'} onMouseOut={(e) => e.target.style.color = '#94a3b8'}>
                     {item}
                   </Link>
                 </li>

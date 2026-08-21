@@ -26,11 +26,11 @@ const About = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6, type: "spring" }}
           >
-            <div className="image-wrapper" style={{ position: 'relative', borderRadius: '15px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
-              <div style={{ width: '100%', height: '400px', background: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <h3 style={{ color: '#fff', fontSize: '2rem' }}>Al-amin</h3>
+            <div className="image-wrapper" style={{ position: 'relative', borderRadius: 'var(--border-radius)', overflow: 'hidden', boxShadow: 'var(--shadow-xl)', border: '1px solid var(--light-gray)' }}>
+              <div style={{ width: '100%', height: '400px', background: 'var(--gradient-glow)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <h3 style={{ color: 'var(--primary-dark)', fontSize: '2.5rem', fontWeight: 800, textShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>Al-amin</h3>
               </div>
             </div>
           </motion.div>

@@ -74,14 +74,15 @@ const ProjectsGrid = () => {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.4 }}
               >
-                <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} scale={1.02} transitionSpeed={2000} style={{ height: '100%' }}>
+                <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02} transitionSpeed={2000} style={{ height: '100%' }}>
                   <div 
                     className="project-card"
                     style={{
                       background: '#fff',
-                      borderRadius: '15px',
+                      borderRadius: 'var(--border-radius)',
                       overflow: 'hidden',
-                      boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
+                      boxShadow: 'var(--shadow)',
+                      border: '1px solid var(--light-gray)',
                       height: '100%',
                       display: 'flex',
                       flexDirection: 'column'
@@ -138,14 +139,14 @@ const ProjectsGrid = () => {
                       </motion.div>
                     </div>
 
-                    <div className="project-info" style={{ padding: '25px', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                      <h3 style={{ fontSize: '1.2rem', color: '#1e293b', marginBottom: '10px' }}>{project.title}</h3>
-                      <p style={{ color: '#64748b', fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '20px', flex: 1 }}>
+                    <div className="project-info" style={{ padding: '30px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                      <h3 style={{ fontSize: '1.25rem', color: 'var(--dark)', marginBottom: '12px', fontWeight: 700 }}>{project.title}</h3>
+                      <p style={{ color: 'var(--gray)', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '24px', flex: 1 }}>
                         {project.description}
                       </p>
                       <div className="project-tags" style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                         {project.techStack.map((tech, i) => (
-                          <span key={i} style={{ padding: '4px 10px', background: '#f1f5f9', color: '#64748b', borderRadius: '4px', fontSize: '0.8rem' }}>
+                          <span key={i} style={{ padding: '6px 12px', background: 'var(--light)', color: 'var(--gray)', borderRadius: '6px', fontSize: '0.8rem', border: '1px solid var(--light-gray)', fontWeight: 500 }}>
                             {tech}
                           </span>
                         ))}

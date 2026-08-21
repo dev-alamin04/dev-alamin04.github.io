@@ -62,14 +62,15 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -10, boxShadow: 'var(--shadow-xl)', borderColor: 'var(--primary)' }}
               style={{
                 background: '#fff',
                 padding: '40px 30px',
-                borderRadius: '15px',
-                boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
+                borderRadius: 'var(--border-radius)',
+                boxShadow: 'var(--shadow)',
+                border: '1px solid var(--light-gray)',
                 textAlign: 'center',
-                transition: 'all 0.3s ease'
+                transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
               }}
             >
               <div 
@@ -78,8 +79,8 @@ const Services = () => {
                   width: '70px',
                   height: '70px',
                   margin: '0 auto 25px',
-                  background: 'rgba(59, 130, 246, 0.1)',
-                  color: '#3b82f6',
+                  background: 'rgba(79, 70, 229, 0.1)',
+                  color: 'var(--primary)',
                   borderRadius: '50%',
                   display: 'flex',
                   alignItems: 'center',

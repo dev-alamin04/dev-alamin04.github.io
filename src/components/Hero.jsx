@@ -32,12 +32,12 @@ const Hero = () => {
             },
           },
           particles: {
-            color: { value: "#38bdf8" },
+            color: { value: "#4f46e5" },
             links: {
-              color: "#38bdf8",
+              color: "#0ea5e9",
               distance: 150,
               enable: true,
-              opacity: 0.2,
+              opacity: 0.15,
               width: 1,
             },
             move: {
@@ -99,11 +99,12 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1 }}
+            style={{ display: 'flex', gap: '15px' }}
           >
-            <Link to="projects" smooth={true} duration={500} className="btn btn-primary">
+            <Link to="projects" smooth={true} duration={500} style={{ padding: '12px 28px', background: 'var(--gradient)', color: '#fff', borderRadius: '50px', cursor: 'pointer', fontWeight: 600, boxShadow: 'var(--shadow-lg)' }}>
               View My Work
             </Link>
-            <Link to="contact" smooth={true} duration={500} className="btn btn-secondary">
+            <Link to="contact" smooth={true} duration={500} style={{ padding: '12px 28px', background: '#fff', color: 'var(--primary)', border: '2px solid var(--primary)', borderRadius: '50px', cursor: 'pointer', fontWeight: 600 }}>
               Contact Me
             </Link>
           </motion.div>
@@ -113,10 +114,11 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1.2 }}
+            style={{ display: 'flex', gap: '20px', marginTop: '30px' }}
           >
-            <a href="https://github.com/dev-alamin04" target="_blank" rel="noreferrer"><FiGithub /></a>
-            <a href="https://www.linkedin.com/in/al-amin-khalifa" target="_blank" rel="noreferrer"><FiLinkedin /></a>
-            <a href="https://twitter.com/dev_alamin04" target="_blank" rel="noreferrer"><FiTwitter /></a>
+            <a href="https://github.com/dev-alamin04" target="_blank" rel="noreferrer" style={{ fontSize: '1.5rem', color: 'var(--gray)', transition: 'color 0.3s' }} onMouseOver={(e)=>e.target.style.color='var(--primary)'} onMouseOut={(e)=>e.target.style.color='var(--gray)'}><FiGithub /></a>
+            <a href="https://www.linkedin.com/in/al-amin-khalifa" target="_blank" rel="noreferrer" style={{ fontSize: '1.5rem', color: 'var(--gray)', transition: 'color 0.3s' }} onMouseOver={(e)=>e.target.style.color='var(--primary)'} onMouseOut={(e)=>e.target.style.color='var(--gray)'}><FiLinkedin /></a>
+            <a href="https://twitter.com/dev_alamin04" target="_blank" rel="noreferrer" style={{ fontSize: '1.5rem', color: 'var(--gray)', transition: 'color 0.3s' }} onMouseOver={(e)=>e.target.style.color='var(--primary)'} onMouseOut={(e)=>e.target.style.color='var(--gray)'}><FiTwitter /></a>
           </motion.div>
         </div>
       </div>
