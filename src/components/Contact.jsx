@@ -1,0 +1,107 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
+
+const Contact = () => {
+  return (
+    <section id="contact" className="contact section-padding">
+      <div className="container">
+        <motion.div 
+          className="section-header text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="section-title">
+            <span className="title-line"></span>
+            Get In <span className="text-gradient">Touch</span>
+          </h2>
+          <p className="section-subtitle">Let's discuss your next project</p>
+        </motion.div>
+
+        <div className="contact-wrapper" style={{ display: 'flex', flexWrap: 'wrap', gap: '50px', marginTop: '50px' }}>
+          <motion.div 
+            className="contact-info"
+            style={{ flex: '1 1 300px' }}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h3 style={{ fontSize: '1.5rem', color: '#1e293b', marginBottom: '20px' }}>Contact Information</h3>
+            <p style={{ color: '#64748b', marginBottom: '40px', lineHeight: 1.6 }}>
+              I'm always open to discussing product design work or partnership opportunities. Feel free to reach out to me!
+            </p>
+
+            <div className="info-item" style={{ display: 'flex', gap: '20px', marginBottom: '30px' }}>
+              <div className="icon" style={{ width: '50px', height: '50px', background: 'rgba(59, 130, 246, 0.1)', color: '#3b82f6', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', flexShrink: 0 }}>
+                <FiMapPin />
+              </div>
+              <div>
+                <h4 style={{ color: '#1e293b', marginBottom: '5px' }}>Location</h4>
+                <p style={{ color: '#64748b' }}>Dhaka, Bangladesh</p>
+              </div>
+            </div>
+
+            <div className="info-item" style={{ display: 'flex', gap: '20px', marginBottom: '30px' }}>
+              <div className="icon" style={{ width: '50px', height: '50px', background: 'rgba(59, 130, 246, 0.1)', color: '#3b82f6', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', flexShrink: 0 }}>
+                <FiMail />
+              </div>
+              <div>
+                <h4 style={{ color: '#1e293b', marginBottom: '5px' }}>Email</h4>
+                <p style={{ color: '#64748b' }}>aak75049@gmail.com</p>
+              </div>
+            </div>
+
+            <div className="info-item" style={{ display: 'flex', gap: '20px' }}>
+              <div className="icon" style={{ width: '50px', height: '50px', background: 'rgba(59, 130, 246, 0.1)', color: '#3b82f6', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', flexShrink: 0 }}>
+                <FiPhone />
+              </div>
+              <div>
+                <h4 style={{ color: '#1e293b', marginBottom: '5px' }}>Phone</h4>
+                <p style={{ color: '#64748b' }}>+880 (Available upon request)</p>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            className="contact-form"
+            style={{ flex: '1 1 400px', background: '#fff', padding: '40px', borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <form onSubmit={(e) => e.preventDefault()}>
+              <div style={{ display: 'flex', gap: '20px', marginBottom: '20px' }}>
+                <div style={{ flex: 1 }}>
+                  <input type="text" placeholder="Your Name" style={{ width: '100%', padding: '15px', borderRadius: '8px', border: '1px solid #e2e8f0', outline: 'none', background: '#f8fafc' }} />
+                </div>
+                <div style={{ flex: 1 }}>
+                  <input type="email" placeholder="Your Email" style={{ width: '100%', padding: '15px', borderRadius: '8px', border: '1px solid #e2e8f0', outline: 'none', background: '#f8fafc' }} />
+                </div>
+              </div>
+              <div style={{ marginBottom: '20px' }}>
+                <input type="text" placeholder="Subject" style={{ width: '100%', padding: '15px', borderRadius: '8px', border: '1px solid #e2e8f0', outline: 'none', background: '#f8fafc' }} />
+              </div>
+              <div style={{ marginBottom: '20px' }}>
+                <textarea placeholder="Your Message" rows="5" style={{ width: '100%', padding: '15px', borderRadius: '8px', border: '1px solid #e2e8f0', outline: 'none', background: '#f8fafc', resize: 'vertical' }}></textarea>
+              </div>
+              <motion.button 
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="btn btn-primary" 
+                style={{ width: '100%', border: 'none', cursor: 'pointer' }}
+              >
+                Send Message
+              </motion.button>
+            </form>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
